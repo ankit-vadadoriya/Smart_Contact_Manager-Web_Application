@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  th:replace="~{base :: parent(~{::#content}, ~{::title}, ~{::script})}"
+>
+  <head>
+    <title data-th-text="${loggedInUser.name}+' | '+About"></title>
+  </head>
+  <body>
+    <div id="content">
+      <!-- Sidebar -->
+      <div th:if="${loggedInUser}">
+        <div data-th-replace="~{user/sidebar::sidebar}"></div>
+      </div>
+
+      <div class="sm:pl-64 pt-20">
+        <header class="relative bg-cover bg-center h-80 flex items-center justify-center"
+                    style="background-image: url('../images/about.png');
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                ">
+                <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+                <div class="relative z-10 max-w-screen-xl mx-auto text-center text-white">
+                    <h1 class="text-4xl font-bold mb-4">About Us</h1>
+                    <p class="text-lg">Discover how Smart Contact Manager can simplify your contact management.</p>
+                </div>
+            </header>
+            <div
+            class="flex py-16 bg-gray-100 dark:bg-gray-900"
+            
+          >
+            <div class="text-center max-w-4xl px-6 mt-10 mx-auto">
+              <h1 class="text-5xl font-bold mb-6 dark:text-white">
+                About Smart Contact Manager
+              </h1>
+              <p class="text-lg mb-8 text-gray-500">
+                Smart Contact Manager is your one-stop solution for efficiently managing contacts. Our mission is to help individuals and organizations streamline their contact management process and stay organized.
+              </p>
+  
+              <div class="grid md:grid-cols-3 gap-6">
+                <!-- Feature 1 -->
+                <div class="bg-white dark:bg-gray-800 text-black rounded-lg p-6 shadow-md hover:shadow-lg transition">
+                  <h2 class="text-2xl font-semibold mb-3 dark:text-white">
+                    <i class="fa-solid fa-user text-blue-600"></i> Manage Contacts
+                  </h2>
+                  <p class="text-gray-600 dark:text-gray-400">
+                    Add, edit, delete, and view your contacts effortlessly. Your contacts are just a click away!
+                  </p>
+                </div>
+  
+                <!-- Feature 2 -->
+                <div class="bg-white dark:bg-gray-800 text-black rounded-lg p-6 shadow-md hover:shadow-lg transition">
+                  <h2 class="text-2xl font-semibold mb-3 dark:text-white">
+                    <i class="fa-solid fa-cloud text-purple-600"></i> Cloud Integration
+                  </h2>
+                  <p class="text-gray-600 dark:text-gray-400">
+                    Sync your contacts seamlessly and access them from anywhere, anytime.
+                  </p>
+                </div>
+  
+                <!-- Feature 3 -->
+                <div class="bg-white dark:bg-gray-800 text-black rounded-lg p-6 shadow-md hover:shadow-lg transition">
+                  <h2 class="text-2xl font-semibold mb-3 dark:text-white">
+                    <i class="fa-solid fa-lock text-green-600"></i> Secure and Private
+                  </h2>
+                  <p class="text-gray-600 dark:text-gray-400">
+                    Your data is encrypted and protected with industry-standard security protocols.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <footer class="bg-gray-800 text-gray-300 py-6">
+            <div class="mx-auto px-6 text-center">
+                <p>&copy; 2025 Smart Contact Manager. All Rights Reserved.</p>
+            </div>
+        </footer>
+      </div>
+    </div>
+
+    <script>
+      console.log("This is the about page.");
+    </script>
+  </body>
+</html>

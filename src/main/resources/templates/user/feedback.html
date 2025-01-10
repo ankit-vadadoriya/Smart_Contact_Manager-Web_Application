@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  th:replace="~{base :: parent(~{::#content}, ~{::title}, ~{::script})}"
+>
+  <head>
+    <title data-th-text="${loggedInUser.name}+' | '+Feedback"></title>
+  </head>
+  <body>
+    <div id="content">
+      <!-- Sidebar -->
+      <div th:if="${loggedInUser}">
+        <div data-th-replace="~{user/sidebar::sidebar}"></div>
+      </div>
+
+      <div class="sm:pl-64">
+        <div
+          class="flex justify-center items-center h-screen bg-gradient-to-r from-green-300 to-teal-600 text-white"
+          style="background-image: url('https://www.bseindia.com/include/images/bg.png');"
+        >
+          <div class="text-center max-w-2xl px-4">
+            <h1 class="text-5xl font-bold mb-4 text-black shadow-inherit animate-pulse dark:text-white">
+              Thank You for Your Feedback!
+            </h1>
+            <p class="text-lg mb-6 text-gray-600 dark:text-gray-500">
+              We appreciate you taking the time to share your thoughts. Your feedback helps us improve and provide a better experience.
+            </p>
+            <div class="space-y-4">
+              <p class="text-md text-gray-700 dark:text-gray-500">
+                <i class="fa-solid fa-quote-left text-xl"></i>
+                "Great platform to manage contacts! Super user-friendly."
+                <i class="fa-solid fa-quote-right text-xl"></i>
+              </p>
+              <p class="text-md text-gray-700 dark:text-gray-500">
+                <i class="fa-solid fa-quote-left text-xl"></i>
+                "I love the dashboard design. Very intuitive and easy to use."
+                <i class="fa-solid fa-quote-right text-xl"></i>
+              </p>
+              <p class="text-md text-gray-700 dark:text-gray-500">
+                <i class="fa-solid fa-quote-left text-xl"></i>
+                "A must-have tool for staying organized with my contacts!"
+                <i class="fa-solid fa-quote-right text-xl"></i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      console.log("This is the feedback page.");
+    </script>
+  </body>
+</html>

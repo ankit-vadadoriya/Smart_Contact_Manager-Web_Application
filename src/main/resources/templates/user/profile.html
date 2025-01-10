@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  th:replace="~{base :: parent(~{::#content}, ~{::title}, ~{::script})}"
+>
+  <head>
+    <title data-th-text="${loggedInUser.name}+' | '+SCM"></title>
+  </head>
+  <body>
+    <div id="content">
+      <!-- if user logged in = sidebar -->
+      <div th:if="${loggedInUser}">
+        <div data-th-replace="~{user/sidebar::sidebar}"></div>
+      </div>
+
+      <div class="sm:pl-64">
+        <div class="flex items-center justify-center mt-20 md:pt-28 flex-col">
+          <!-- profile card -->
+          <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg max-w-xl w-full">
+            <div class="flex flex-col items-center">
+            <img data-th-src="@{${loggedInUser.profilePic}}" alt="Profile Picture" id="profilePic" class="rounded-full w-40 h-40 shadow-lg object-cover mb-3">
+                <h2 id="name" class="text-2xl font-semibold text-gray-800 mb-2 dark:text-gray-100" data-th-text="${loggedInUser.name}">User Name</h2>
+                <p id="email" class="text-gray-600 text-sm mb-2 dark:text-gray-500" data-th-text="${loggedInUser.email}">example@gmail.com</p>
+                <p id="phone" class="text-gray-600 text-sm mb-2 dark:text-gray-500" 
+                data-th-text="${loggedInUser.phoneNumber != null ? loggedInUser.phoneNumber : 'Phone : Null'}"></p>
+                <p id="about" class="text-gray-600 text-sm mb-2 dark:text-gray-500" data-th-text="${loggedInUser.about}">About</p>
+                <!-- <p id="role" class="text-gray-600 text-sm mb-2 dark:text-gray-500" data-th-text="${loggedInUser.roleList}">About</p> -->
+ 
+                <div class="w-full flex justify-center gap-5">
+                  <p class="text-xs font-medium text-white bg-blue-500 px-3 py-1 rounded-full">Email Verified : 
+                    <span id="emailVerifiedStatus" data-th-text="${loggedInUser.emailVerified ? 'YES' : 'No'}"></span>
+                  </p>
+                  <p class="text-xs font-medium text-white bg-yellow-500 px-3 py-1 rounded-full">Phone Verified : 
+                    <span id="phoneVerifiedStatus" data-th-text="${loggedInUser.phoneVerified ? 'YES' : 'No'}"></span>
+                  </p>
+                 </div>
+            </div>
+        </div>
+    
+        </div>
+      </div>
+    </div>
+
+    <script>
+      console.log("This is profile page.");
+    </script>
+  </body>
+</html>

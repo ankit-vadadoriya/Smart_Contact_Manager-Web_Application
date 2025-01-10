@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" th:replace="~{base :: parent(~{::#content}, ~{::title}, ~{::script})}">
+<head>
+    <title>Services</title>
+</head>
+<body>
+    <div id="content">
+        <div class="min-h-screen">
+            <header class="relative bg-cover bg-center h-80 flex items-center justify-center"
+                style="background-image: url('/images/service.png');
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                ">
+                <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+                <div class="relative z-10 max-w-screen-xl mx-auto text-center text-white">
+                    <h1 class="text-4xl font-bold mb-4">Our Services</h1>
+                    <p class="text-lg">Discover how Smart Contact Manager can simplify your contact management.</p>
+                </div>
+            </header>
+
+    
+        <!-- Services Section -->
+        <div class="py-16 bg-gray-100 dark:bg-gray-900">
+            <div class="max-w-screen-xl mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-12 dark:text-white">What We Offer</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Service 1 -->
+                    <div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md hover:shadow-lg transition">
+                        <i class="fa-solid fa-user-cog text-blue-600 text-4xl mb-4"></i>
+                        <h3 class="text-2xl font-semibold mb-3">Advanced Contact Management</h3>
+                        <p class="text-gray-600 dark:text-gray-400">
+                            Organize, search, and access all your contacts with our user-friendly platform.
+                        </p>
+                    </div>
+                    <!-- Service 2 -->
+                    <div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md hover:shadow-lg transition">
+                        <i class="fa-solid fa-cloud text-purple-600 text-4xl mb-4"></i>
+                        <h3 class="text-2xl font-semibold mb-3">Cloud Synchronization</h3>
+                        <p class="text-gray-600 dark:text-gray-400">
+                            Access your data securely from any device, anywhere, anytime.
+                        </p>
+                    </div>
+                    <!-- Service 3 -->
+                    <div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md hover:shadow-lg transition">
+                        <i class="fa-solid fa-lock text-green-600 text-4xl mb-4"></i>
+                        <h3 class="text-2xl font-semibold mb-3">Data Security</h3>
+                        <p class="text-gray-600 dark:text-gray-400">
+                            Enjoy peace of mind with our industry-leading data encryption and privacy policies.
+                        </p>
+                    </div>
+                    <!-- Service 4 -->
+                    <div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md hover:shadow-lg transition">
+                        <i class="fa-solid fa-chart-line text-red-600 text-4xl mb-4"></i>
+                        <h3 class="text-2xl font-semibold mb-3">Analytics & Insights</h3>
+                        <p class="text-gray-600 dark:text-gray-400">
+                            Get valuable insights into your contact network with our analytics tools.
+                        </p>
+                    </div>
+                    <!-- Service 5 -->
+                    <div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md hover:shadow-lg transition">
+                        <i class="fa-solid fa-calendar-alt text-yellow-500 text-4xl mb-4"></i>
+                        <h3 class="text-2xl font-semibold mb-3">Task Scheduling</h3>
+                        <p class="text-gray-600 dark:text-gray-400">
+                            Keep track of important dates and tasks with our scheduling features.
+                        </p>
+                    </div>
+                    <!-- Service 6 -->
+                    <div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md hover:shadow-lg transition">
+                        <i class="fa-solid fa-envelope text-indigo-500 text-4xl mb-4"></i>
+                        <h3 class="text-2xl font-semibold mb-3">Email Integration</h3>
+                        <p class="text-gray-600 dark:text-gray-400">
+                            Send and receive emails directly from the platform with full integration support.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <footer class="bg-gray-800 text-gray-300 py-6">
+            <div class="mx-auto px-6 text-center">
+                <p>&copy; 2025 Smart Contact Manager. All Rights Reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        console.log("services page");
+    </script>
+    <script>
+        console.log("secind services page script");
+    </script>
+</body>
+</html>

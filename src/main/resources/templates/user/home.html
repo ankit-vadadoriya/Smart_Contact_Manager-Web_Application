@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  th:replace="~{base :: parent(~{::#content}, ~{::title}, ~{::script})}"
+>
+  <head>
+    <title data-th-text="${loggedInUser.name}+' | '+About"></title>
+  </head>
+  <body>
+    <div id="content">
+      <!-- Sidebar -->
+      <div th:if="${loggedInUser}">
+        <div data-th-replace="~{user/sidebar::sidebar}"></div>
+      </div>
+
+      <div class="sm:pl-64 pt-20">
+        <header class="relative bg-cover bg-center" 
+                style="background-image: url('../images/home.png');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            ">
+            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+            <div class="relative z-10 max-w-screen-xl mx-auto px-6 py-32 text-center text-white">
+                <h1 class="text-5xl font-bold mb-6">Welcome to Smart Contact Manager</h1>
+                <p class="text-lg mb-8">
+                    Manage your contacts efficiently, stay organized, and keep everything secure in one place.
+                </p>
+                <a href="/about" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg shadow-md text-white text-lg font-semibold">
+                    Learn More
+                </a>
+            </div>
+        </header>
+
+        <div class="py-16 bg-gray-100 dark:bg-gray-900">
+            <div class="max-w-screen-xl mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-12 dark:text-white">Why Choose Us?</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Feature 1 -->
+                    <div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md hover:shadow-lg transition">
+                        <i class="fa-solid fa-user text-blue-600 text-4xl mb-4"></i>
+                        <h3 class="text-2xl font-semibold mb-3">Manage Contacts</h3>
+                        <p class="text-gray-600 dark:text-gray-400">
+                            Effortlessly add, edit, delete, and organize your contacts with ease.
+                        </p>
+                    </div>
+                    <!-- Feature 2 -->
+                    <div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md hover:shadow-lg transition">
+                        <i class="fa-solid fa-cloud text-purple-600 text-4xl mb-4"></i>
+                        <h3 class="text-2xl font-semibold mb-3">Cloud Integration</h3>
+                        <p class="text-gray-600 dark:text-gray-400">
+                            Sync your data seamlessly across all devices with our cloud integration.
+                        </p>
+                    </div>
+                    <!-- Feature 3 -->
+                    <div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md hover:shadow-lg transition">
+                        <i class="fa-solid fa-lock text-green-600 text-4xl mb-4"></i>
+                        <h3 class="text-2xl font-semibold mb-3">Secure & Private</h3>
+                        <p class="text-gray-600 dark:text-gray-400">
+                            Your data is protected with industry-leading security and encryption.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="bg-gray-800 text-gray-300 py-6">
+            <div class="mx-auto px-6 text-center">
+                <p>&copy; 2025 Smart Contact Manager. All Rights Reserved.</p>
+            </div>
+        </footer>
+      </div>
+    </div>
+
+    <script>
+      console.log("This is the about page.");
+    </script>
+  </body>
+</html>
