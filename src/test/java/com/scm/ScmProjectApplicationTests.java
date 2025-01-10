@@ -16,10 +16,11 @@ class ScmProjectApplicationTests {
 	@Autowired
 	private EmailService service;
 
+	// for email testing
 	@Test
 	void sendEmailTest() {
 		service.sendEmail(
-				"aplusinternational11@gmail.com",
+				"your email Id",
 				"Just managing the email service",
 				"This is scm project working on emial service.");
 	}
