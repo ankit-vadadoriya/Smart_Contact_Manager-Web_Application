@@ -29,6 +29,24 @@ Node.js-based tooling for managing front-end assets (e.g., Tailwind CSS).
 **Persistent Data Storage :** Securely stores user and contact information in a MySQL relational database.
 **Optimized with JPA and Hibernate :** Configured with JPA and Hibernate to simplify querying, data manipulation, and ensure robust data management.
 
+## Project Structure 
+
+### Maven Configuration :
+The pom.xml file manages the project's dependencies and configurations.
+
+### Source Code :
+#### src/main :
+- **Config :** Contains configuration classes for user login, registration, and authentication.
+- **Controller :** Handles HTTP requests and maps them to appropriate views or services.
+- **Services :** Contains the business logic of the application.
+- **Model/Entity :** Defines data models for contacts and users.
+- **Forms :** Manages contact form data.
+- **Validators :** Performs validation on form inputs
+- **Repository :** Interfaces for database operations.
+- **Thymeleaf Templates :** HTML templates for rendering the front-end.
+#### src/test : 
+- Contains unit and integration test cases to ensure the application's functionality.
+
 ## Tech Stack
 
 ### 1. Frontend :
