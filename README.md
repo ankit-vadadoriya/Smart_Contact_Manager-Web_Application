@@ -1,12 +1,19 @@
 ![Screenshot1](https://github.com/user-attachments/assets/ac611fa3-a23e-4049-adcd-2efde9e9ee45)
 
 ![Screenshot2](https://github.com/user-attachments/assets/f10ddd3f-b2bf-4378-9526-3bbdefcd71ee)
+
 ![Screenshot3](https://github.com/user-attachments/assets/7db66433-9693-4335-93d7-29222616d620)
+
 ![Screenshot4](https://github.com/user-attachments/assets/8a3eae6e-9fd3-4ed3-b517-5e742a51597e)
+
 ![Screenshot5](https://github.com/user-attachments/assets/bad2a0b7-9035-4229-9358-de10eeb0f5e0)
+
 ![Screenshot6](https://github.com/user-attachments/assets/8a80606e-7051-4dc5-b78e-7e39e6077516)
+
 ![Screenshot7](https://github.com/user-attachments/assets/4f29b491-e74a-49fc-b50e-aaabe1635437)
+
 ![Screenshot8](https://github.com/user-attachments/assets/7bacba1b-67d6-4d82-be63-187f3968b6b4)
+
 [scmProject.webm](https://github.com/user-attachments/assets/d3e9e52a-b116-4abf-881a-950f573244df)
 
 # Smart Contact Manager Web-Application
